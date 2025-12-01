@@ -8,12 +8,9 @@ import { onAuthStateChanged } from 'firebase/auth'
 import { doc, setDoc } from 'firebase/firestore'
 
 export default function Payment() {
-
+    
     const router = useRouter()
-
     const params = useSearchParams()
-    const price = params.get("price")
-    const plan = params.get("name")
 
     const [user, setUser] = useState(null)
     const [cardInfo, setCardInfo] = useState({
@@ -24,6 +21,8 @@ export default function Payment() {
         saveCard: false
     })
     const [payMethod, setPayMethod] = useState("Credit Card")
+    const [price, setPrice] = useState("")
+    const [plan, setPlan] = useState("")
     const [errorAlert, setErrorAlert] = useState("")
     const [showAlert, setShowAlert] = useState(false)
 
@@ -33,6 +32,13 @@ export default function Payment() {
         })
         return () => unsubscribe()
     }, [])
+
+    useEffect(() => {
+        const price = params.get("price")
+        const plan = params.get("name")
+        setPrice(price)
+        setPlan(plan)
+    }, [params])
 
     const checkCardInfo = () => {
         const cardNumPattern = /^\d{13,19}$/;
