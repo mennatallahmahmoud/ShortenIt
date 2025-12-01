@@ -15,7 +15,6 @@ export default function Pricing() {
   const [user, setUser] = useState(null)
   const [currPlan, setCurrPlan] = useState("Free")
   const [newPlan, setNewPlan] = useState("")
-  const [planPrice, setPlanPrice] = useState("")
   const [planName, setPlanName] = useState("")
 
   useEffect(() => {
@@ -103,7 +102,6 @@ export default function Pricing() {
                       onClick={() => {
                         if (!user) router.push('/auth')
                         setNewPlan(plan.name)
-                        setPlanPrice(plan.price)
                         setPlanName(plan.name)
                       }}>Subscribe</button>
                     )}
@@ -125,7 +123,7 @@ export default function Pricing() {
               <button className="btn btn-sm bg-[#004aad] hover:!bg-[#0160dd] text-white rounded-2xl px-4 ms-2"
                 onClick={() => {
                   if (newPlan === "Free") handleBtn(newPlan)
-                  if (newPlan !== "Free") router.push(`/payment?name=${encodeURIComponent(planName)}&price=${encodeURIComponent(planPrice)}`)
+                  if (newPlan !== "Free") router.push(`/payment/${encodeURIComponent(planName)}`)
                   setTimeout(() => {
                     setNewPlan("")
                   }, 500);
