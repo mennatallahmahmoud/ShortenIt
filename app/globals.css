@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+body {
+  margin: 0;
+  background-color: #f0f1f6;
+}
+
+a:hover, button:hover {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+.img-cont {
+  animation: move 3s infinite linear alternate;
+}
+.input-fie {
+  background: linear-gradient(135deg, #004aad, #7ebcf4);
+}
+
+.cta-sec {
+  background-image: url("/assets/cta-bg.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.pricing-pg, .auth-btns, .payment-pg {
+  background: linear-gradient(135deg, #001F3F, #003366, #004aad);
+}
+
+.faq-img {
+  animation: upAndDown 3s infinite linear alternate;
+}
+
+.auth-pg, .verify-pg, .forget-password-pg, .pricing-pg, .payment-pg, .success-pg {
+  background: linear-gradient(270deg, #001f3f, #004aad, #0073e6, #33bbff);
+  background-size: 400% 400%;
+  animation: moveGradient 10s ease infinite;
+}
+
+@keyframes move {
+  0% {transform: translateX(0);}
+  35% {transform: translateX(5px);}
+  70% {transform: translateX(-5px);}
+  100% {transform: translateX(0);}
+}
+@keyframes upAndDown {
+  0% {transform: translateY(0);}
+  35% {transform: translateY(5px);}
+  70% {transform: translateY(-5px);}
+  100% {transform: translateY(0);}
+}
+@keyframes moveGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

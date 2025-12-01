@@ -1,0 +1,85 @@
+{
+    "plans" : [
+        {
+            "badge" : false,
+            "name" : "Free",
+            "price" : "£0/mo",
+            "details" : [
+                {
+                    "available" : true,
+                    "text" : "Shorten unlimited links"
+                },
+                {
+                    "available" : true,
+                    "text" : "Save your links in your account"
+                },
+                {
+                    "available" : false,
+                    "text" : "Save up to 200 links"
+                },
+                {
+                    "available" : false,
+                    "text" : "Simple dashboard to manage your links"
+                },
+                {
+                    "available" : false,
+                    "text" : "Priority support"
+                }
+            ]
+        },
+        {
+            "badge" : true,
+            "name" : "Basic",
+            "price" : "£50/mo",
+            "details" : [
+                {
+                    "available" : true,
+                    "text" : "Shorten unlimited links"
+                },
+                {
+                    "available" : true,
+                    "text" : "Save your links in your account"
+                },
+                {
+                    "available" : true,
+                    "text" : "Save up to 200 links"
+                },
+                {
+                    "available" : true,
+                    "text" : "Simple dashboard to manage your links"
+                },
+                {
+                    "available" : false,
+                    "text" : "Priority support"
+                }
+            ]
+        },
+        {
+            "badge" : false,
+            "name" : "Pro",
+            "price" : "£120/mo",
+            "details" : [
+                {
+                    "available" : true,
+                    "text" : "Shorten unlimited links"
+                },
+                {
+                    "available" : true,
+                    "text" : "Save your links in your account"
+                },
+                {
+                    "available" : true,
+                    "text" : "Save unlimited links"
+                },
+                {
+                    "available" : true,
+                    "text" : "Simple dashboard to manage your links"
+                },
+                {
+                    "available" : true,
+                    "text" : "Priority support"
+                }
+            ]
+        }
+    ]
+}

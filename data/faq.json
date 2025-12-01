@@ -1,0 +1,29 @@
+{
+    "faq" : [
+        {
+            "id" : 1,
+            "ques" : "Is the link shortening service free?",
+            "ans" : "Yes! You can shorten up to 50 links for free."
+        },
+        {
+            "id" : 2,
+            "ques" : "Do I need an account to use the service?",
+            "ans" : "No, you can shorten links without signing up. However, creating an account lets you save and manage your links."
+        },
+        {
+            "id" : 3,
+            "ques" : "Can I contact support if I face an issue?",
+            "ans" : "Support is available only in paid plans."
+        },
+        {
+            "id" : 4,
+            "ques" : "What payment methods do you accept?",
+            "ans" : "We currently accept credit/debit cards and mobile wallet payments in Egypt."
+        },
+        {
+            "id" : 5,
+            "ques" : "Can I cancel my subscription anytime?",
+            "ans" : "Yes, you can cancel anytime. Your account will stay active until the end of the billing period."
+        }
+    ]
+}
