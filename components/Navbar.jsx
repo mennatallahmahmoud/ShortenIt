@@ -20,6 +20,7 @@ export default function Navbar() {
     const [openUserDropdown, setOpenUserDropdown] = useState(false)
     const [user, setUser] = useState(null)
     const [userName, setUserName] = useState("")
+    const [logoutAlert, setLogoutAlert] = useState(false)
     const [deleteAccountAlert, setDeleteAccountAlert] = useState(false)
     const [logoutBeforeDeleteAccount, setLogoutBeforeDeleteAccount] = useState(false)
 
@@ -82,7 +83,8 @@ export default function Navbar() {
             document.cookie = "authToken=; path=/; max-age=0;";
             setUser(null)
             setUserName("")
-            router.push('/auth')
+            setLogoutAlert(false)
+            router.replace('/auth')
         } catch(err) {
             console.log(`Error Signing Out`, err);
         }
@@ -177,7 +179,7 @@ export default function Navbar() {
                             <li><span className='font-bold text-[#004aad] hover:!bg-transparent text-base cursor-auto'>Hi {userName}</span></li>
                             <li><Link href='/dashboard' className='font-bold text-[#7c7c7c] transition-all duration-200 hover:!text-[#004aad]'>Dashboard</Link></li>
                             <li><button className='font-bold text-[#7c7c7c] transition-all duration-200 hover:!text-[#004aad]' 
-                                onClick={handleLogOut}>Logout</button></li>
+                                onClick={() => setLogoutAlert(true)}>Logout</button></li>
                             <li><button className='font-bold text-red-600 transition-all duration-200 hover:!text-red-700'
                                 onClick={() => setDeleteAccountAlert(true)}>Delete Account</button></li>
                         </ul>
@@ -191,6 +193,23 @@ export default function Navbar() {
                 )}
             </div>
         </div>
+        {user && logoutAlert && (
+        <div className="fixed left-1/2 top-1/2 -translate-1/2 bg-[#0000004f] w-full h-full flex justify-center items-center z-40"
+            onClick={() => setLogoutAlert(false)}>
+            <div role="alert" className="alert alert-vertical gap-1.5 text-[rgba(42,42,42,0.95)]"
+                onClick={(e) => e.stopPropagation()}>
+                <span>Are you sure you want to logout?</span>
+                <div>
+                    <button className="btn btn-sm rounded-2xl px-3 ms-2"
+                    onClick={() => logoutAlert && setLogoutAlert(false)}
+                    >Cancel</button>
+                    <button className="btn btn-sm bg-gray-600 hover:!bg-gray-500 text-white rounded-2xl px-3 ms-2"
+                        onClick={handleLogOut}>Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+        )}
         {deleteAccountAlert && (
         <div className="fixed left-1/2 top-1/2 -translate-1/2 bg-[#0000004f] w-full h-full flex justify-center items-center z-40"
             onClick={() => setDeleteAccountAlert(false)}>

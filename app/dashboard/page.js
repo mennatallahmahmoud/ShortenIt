@@ -18,6 +18,11 @@ export default function Dashboard() {
   const [userPlan, setUserPlan] = useState("")
 
   useEffect(() => {
+    window.history.replaceState(null, null, window.location.href);
+  }, []);
+
+
+  useEffect(() => {
       let timer = setTimeout(() => {
           setSuccessCopy(false)
       }, 3000)
