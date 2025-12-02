@@ -65,11 +65,11 @@ export default function Navbar() {
 
     const startBtn = () => {
         if(!user) {
-            router.push('/auth')
+            router.replace('/auth')
             return
         }
         if (user && window.location.pathname !== '/') {
-            router.push('/#hero')
+            router.replace('/#hero')
         }
         if (user && window.location.pathname === '/') {
             window.scrollTo({top: 140, behavior: 'smooth'})
