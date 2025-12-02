@@ -64,17 +64,18 @@ export default function Navbar() {
     }, [])
 
     const startBtn = () => {
-        if(!user) {
-            router.replace('/auth')
-            return
+        if (!user) {
+            router.replace('/auth');
+            return;
         }
-        if (user && window.location.pathname !== '/') {
-            router.replace('/#hero')
+
+        if (window.location.pathname === '/') {
+            window.scrollTo({ top: 140, behavior: 'smooth' });
+            document.getElementById("shorten-input")?.focus();
+            return;
         }
-        if (user && window.location.pathname === '/') {
-            window.scrollTo({top: 140, behavior: 'smooth'})
-            document.getElementById("shorten-input").focus()
-        }
+
+        router.replace('/#hero');
     }
 
     const handleLogOut = async () => {
