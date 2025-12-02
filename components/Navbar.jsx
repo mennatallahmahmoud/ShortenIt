@@ -116,7 +116,7 @@ export default function Navbar() {
             document.cookie = "authToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
             document.cookie = "authToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 
-            router.push('/auth')
+            router.replace('/auth')
         } catch(err) {
             console.log(`Error deleting account`, err);
             setLogoutBeforeDeleteAccount(true)
