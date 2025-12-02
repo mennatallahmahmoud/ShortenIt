@@ -64,7 +64,10 @@ export default function Navbar() {
     }, [])
 
     const startBtn = () => {
-        if (!user) {
+
+        const token = document.cookie.split("; ").find(row => row.startsWith("authToken="))?.split("=")[1];
+
+        if (!token) {
             router.replace('/auth');
             return;
         }
