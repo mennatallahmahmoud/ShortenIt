@@ -141,8 +141,8 @@ export default function Auth() {
             {activeForm === "login" ? (
             <div>
               <fieldset className="fieldset text-center rounded-box p-4">
-                <label className="label">Email</label>
-                <input type="email" value={loginData.email} className="input w-full focus:!outline-0 focus-within:!outline-0 focus:border-[#004aad] rounded-3xl" placeholder="Email" 
+                <label className="label !text-[#2a2a2af2]">Email</label>
+                <input type="email" value={loginData.email} className="input w-full bg-[#f9f9f9] focus:!outline-0 focus-within:!outline-0 border-gray-400 !text-[#2a2a2af2] focus:border-[#004aad] rounded-3xl" placeholder="Email" 
                   onChange={(e) => {
                     formAlert && setformAlert(false)
                     emailAlert && setEmailAlert(false)
@@ -164,8 +164,8 @@ export default function Auth() {
                 </div>
                 )}
 
-                <label className="label">Password</label>
-                <input type="password" value={loginData.password} className="input w-full focus:!outline-0 focus-within:!outline-0 focus:border-[#004aad] rounded-3xl" placeholder="Password" 
+                <label className="label !text-[#2a2a2af2]">Password</label>
+                <input type="password" value={loginData.password} className="input w-full bg-[#f9f9f9] focus:!outline-0 focus-within:!outline-0 border-gray-400 !text-[#2a2a2af2] focus:border-[#004aad] rounded-3xl" placeholder="Password" 
                   onChange={(e) => {
                     formAlert && setformAlert(false)
                     passwordAlert && setPasswordAlert(false)
@@ -191,7 +191,7 @@ export default function Auth() {
                   onClick={handleLogin}>Login</button>
                 )}
 
-                <span>Not a member? <button className="link-primary cursor-pointer"
+                <span className='!text-[#2a2a2af2]'>Not a member? <button className="link-primary cursor-pointer"
                   onClick={() => setActiveForm("signup")}>Signup now</button></span>
 
                 {formAlert && (
@@ -213,15 +213,15 @@ export default function Auth() {
 
             <div>
               <fieldset className="fieldset text-center rounded-box p-4">
-                <label className="label">Full Name</label>
-                <input type="text" value={signupData.name} className="input w-full focus:!outline-0 focus-within:!outline-0 focus:border-[#004aad] rounded-3xl" placeholder="Full Name" 
+                <label className="label !text-[#2a2a2af2]">Full Name</label>
+                <input type="text" value={signupData.name} className="input w-full bg-[#f9f9f9] focus:!outline-0 focus-within:!outline-0 border-gray-400 !text-[#2a2a2af2] focus:border-[#004aad] rounded-3xl" placeholder="Full Name" 
                   onChange={(e) => {
                     formAlert && setformAlert(false)
                     setSignupData({...signupData, name: e.target.value})
                   }}/>
                 
-                <label className="label">Email</label>
-                <input type="email" value={signupData.email} className="input w-full focus:!outline-0 focus-within:!outline-0 focus:border-[#004aad] rounded-3xl" placeholder="Email" 
+                <label className="label !text-[#2a2a2af2]">Email</label>
+                <input type="email" value={signupData.email} className="input w-full bg-[#f9f9f9] focus:!outline-0 focus-within:!outline-0 border-gray-400 !text-[#2a2a2af2] focus:border-[#004aad] rounded-3xl" placeholder="Email" 
                   onChange={(e) => {
                     emailAlert && setEmailAlert(false)
                     existedEmailAlert && setExistedEmailAlert(false)
@@ -245,8 +245,8 @@ export default function Auth() {
                 </div>
                 )}
 
-                <label className="label">Password</label>
-                <input type="password" value={signupData.password} className="input w-full focus:!outline-0 focus-within:!outline-0 focus:border-[#004aad] rounded-3xl" placeholder="Password" 
+                <label className="label !text-[#2a2a2af2]">Password</label>
+                <input type="password" value={signupData.password} className="input w-full bg-[#f9f9f9] focus:!outline-0 focus-within:!outline-0 border-gray-400 !text-[#2a2a2af2] focus:border-[#004aad] rounded-3xl" placeholder="Password" 
                   onChange={(e) => {
                     passwordAlert && setPasswordAlert(false)
                     formAlert && setformAlert(false)
@@ -261,8 +261,8 @@ export default function Auth() {
                   </div>
                 )}
 
-                <label className="label">Confirm Password</label>
-                <input type="password" value={signupData.confirmPassword} className="input w-full focus:!outline-0 focus-within:!outline-0 focus:border-[#004aad] rounded-3xl" placeholder="Confirm Password"
+                <label className="label !text-[#2a2a2af2]">Confirm Password</label>
+                <input type="password" value={signupData.confirmPassword} className="input w-full bg-[#f9f9f9] focus:!outline-0 focus-within:!outline-0 border-gray-400 !text-[#2a2a2af2] focus:border-[#004aad] rounded-3xl" placeholder="Confirm Password"
                   onChange={(e) => {
                     passwordMatchAlert && setPasswordMatchAlert(false)
                     formAlert && setformAlert(false)

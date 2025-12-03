@@ -7,7 +7,7 @@ import data from '../../data/faq.json';
 export default function FAQ() {
 
     useEffect(() => {
-        window.scrollTo(0,0)
+        window.scrollTo(0,0) 
     }, [])
   
   return (
@@ -22,8 +22,8 @@ export default function FAQ() {
             </div>
             <div className='flex-1/2'>
                {data && data.faq.map((q) => (
-                    <div key={q.id} className="collapse collapse-arrow bg-base-100 border border-base-300">
-                        <input type="radio" name="my-accordion-2" defaultChecked={(q.id === 1 === true)} />
+                    <div key={q.id} className="collapse collapse-arrow border border-gray-200 !bg-[#f9f9f9]">
+                        <input type="radio" name="my-accordion-2" defaultChecked={(q.id === 1 === true)} className=''/>
                         <div className="collapse-title text-[#2a2a2af2] text-lg font-bold">{q.ques}</div>
                         <div className="collapse-content text-[#2a2a2af2] text-base">{q.ans}</div>
                     </div>

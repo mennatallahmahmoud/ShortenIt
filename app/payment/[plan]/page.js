@@ -89,19 +89,19 @@ export default function Payment() {
 
   return (
     <main className='payment-pg pt-36 pb-24 px-6 md:px-24 text-center relative min-h-[100vh] bg-fixed'>
-      <div className="card bg-base-100 shadow-2xl lg:w-1/2 mx-auto">
+      <div className="card bg-[#f9f9f9] shadow-2xl lg:w-1/2 mx-auto">
         <fieldset className="fieldset !border-none rounded-box border p-8">
             <h3 className='text-4xl font-bold text-[#2a2a2af2] mb-3'>{price}</h3>
             <div className='text-left flex items-center'>
-                <input type="radio" id='fake-card' name="fake-payment" className="accent-[#004aad] w-5 h-5 me-2" defaultChecked 
+                <input type="radio" id='fake-card' name="fake-payment" className="accent-[#004aad] bg-[#f9f9f9] w-5 h-5 me-2" defaultChecked 
                     onChange={() => setPayMethod("Credit Card")}/>
                 <label htmlFor="fake-card" className='text-sm md:text-base text-[#2a2a2af2] font-bold cursor-pointer'>Credit/Debit Card</label>
                 <Image width={100} height={100} src="/assets/visa.webp" alt='Visa Icon' className="ms-auto"/>
             </div>
             <span className="rounded-3xl px-3 py-2 bg-[#004bad17] w-fit text-[#004aad] text-left text-xs">Pay securely with your Bank Account using Visa or Mastercard</span>
             <div className='text-left mt-5 relative'>
-                <label className="label font-bold  bg-white absolute -top-3 left-5 z-10 p-1">Card Num.</label>
-                <input type="text" className="input block w-full focus:!outline-0 focus-within:!outline-0 focus:border-[#004aad] rounded-3xl" placeholder="XXXX XXXX XXXX XXXX" 
+                <label className="label font-bold  bg-[#f9f9f9] !text-[#2a2a2af2] absolute -top-3 left-5 z-10 p-1">Card Num.</label>
+                <input type="text" className="input block w-full bg-[#f9f9f9] focus:!outline-0 focus-within:!outline-0 border-gray-400 !text-[#2a2a2af2] focus:border-[#004aad] rounded-3xl" placeholder="XXXX XXXX XXXX XXXX" 
                     onChange={(e) => {
                         setCardInfo({...cardInfo, cardNum: e.target.value})
                         setErrorAlert("")
@@ -109,8 +109,8 @@ export default function Payment() {
                     }}/>
             </div>
             <div className='text-left mt-5 relative'>
-                <label className="label font-bold  bg-white absolute -top-3 left-5 z-10 p-1">Name on Card</label>
-                <input type="text" className="input block w-full focus:!outline-0 focus-within:!outline-0 focus:border-[#004aad] rounded-3xl" placeholder="Name on Card" 
+                <label className="label font-bold  bg-[#f9f9f9] !text-[#2a2a2af2] absolute -top-3 left-5 z-10 p-1">Name on Card</label>
+                <input type="text" className="input block w-full bg-[#f9f9f9] focus:!outline-0 focus-within:!outline-0 border-gray-400 !text-[#2a2a2af2] focus:border-[#004aad] rounded-3xl" placeholder="Name on Card" 
                     onChange={(e) => {
                         setCardInfo({...cardInfo, cardName: e.target.value})
                         setErrorAlert("")
@@ -119,8 +119,8 @@ export default function Payment() {
             </div>
             <div className='flex flex-col md:flex-row items-center justify-between md:gap-6'>
                 <div className='text-left mt-5 relative w-full'>
-                    <label className="label font-bold  bg-white absolute -top-3 left-5 z-10 p-1">Expire Date</label>
-                    <input type="text" className="input block focus:!outline-0 focus-within:!outline-0 focus:border-[#004aad] rounded-3xl" placeholder="M/Y" 
+                    <label className="label font-bold  bg-[#f9f9f9] !text-[#2a2a2af2] absolute -top-3 left-5 z-10 p-1">Expire Date</label>
+                    <input type="text" className="input block bg-[#f9f9f9] focus:!outline-0 focus-within:!outline-0 border-gray-400 !text-[#2a2a2af2] focus:border-[#004aad] rounded-3xl" placeholder="M/Y" 
                         onChange={(e) => {
                             setCardInfo({...cardInfo, cardDate: e.target.value})
                             setErrorAlert("")
@@ -128,8 +128,8 @@ export default function Payment() {
                         }}/>
                 </div>
                 <div className='text-left mt-5 relative w-full'>
-                    <label className="label font-bold  bg-white absolute -top-3 left-5 z-10 p-1">CVV Code</label>
-                    <input type="password" className="input block focus:!outline-0 focus-within:!outline-0 focus:border-[#004aad] rounded-3xl" placeholder="XXX" 
+                    <label className="label font-bold  bg-[#f9f9f9] !text-[#2a2a2af2] absolute -top-3 left-5 z-10 p-1">CVV Code</label>
+                    <input type="password" className="input block bg-[#f9f9f9] focus:!outline-0 focus-within:!outline-0 border-gray-400 !text-[#2a2a2af2] focus:border-[#004aad] rounded-3xl" placeholder="XXX" 
                         onChange={(e) => {
                             setCardInfo({...cardInfo, cardPass: e.target.value})
                             setErrorAlert("")
@@ -144,7 +144,7 @@ export default function Payment() {
             </div>
 
             <div className='text-left flex items-center mt-6'>
-                <input type="radio" id='fake-paypal' name="fake-payment" className="accent-[#004aad] w-5 h-5 me-2" 
+                <input type="radio" id='fake-paypal' name="fake-payment" className="accent-[#004aad] bg-[#f9f9f9] w-5 h-5 me-2" 
                     onChange={() => setPayMethod("PayPal")}/>
                 <label htmlFor='fake-paypal' className='text-base text-[#2a2a2af2] font-bold cursor-pointer'>PayPal</label>
                 <Image width={90} height={90} src={"/assets/paypal.webp"} alt='Visa Icon' className="ms-auto"/>

@@ -90,7 +90,7 @@ export default function Dashboard() {
         <div className="grid grid-cols-3 mt-10 gap-4 md:px-16">
           {userLinks.map((link) => (
           <div className='col-span-3 lg:col-span-1' key={link.id}>
-            <div className="card bg-base-100 card-sm shadow-sm hover:shadow-lg min-h-32">
+            <div className="card bg-[#f9f9f9] card-sm shadow-sm hover:shadow-lg min-h-32">
               <div className="card-body justify-between overflow-auto">
                 <div className='flex justify-center items-center gap-2'>
                   <div className="hidden md:block relative w-full min-w-[20px] max-w-[60px] aspect-[266/233]">
@@ -119,7 +119,7 @@ export default function Dashboard() {
             {deleteAlert && (
             <div className="fixed left-1/2 top-1/2 -translate-1/2 bg-[#0000004f] w-full h-full flex justify-center items-center z-40"
               onClick={() => deleteAlert && setDeleteAlert(false)}>
-              <div role="alert" className="alert alert-vertical gap-1.5 text-[rgba(42,42,42,0.95)]"
+              <div role="alert" className="alert alert-vertical bg-[#f9f9f9] !border-gray-400 gap-1.5 text-[rgba(42,42,42,0.95)]"
                 onClick={(e) => e.stopPropagation()}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" role="img">
                   <title>Delete</title>

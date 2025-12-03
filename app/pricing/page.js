@@ -78,7 +78,7 @@ export default function Pricing() {
         {data && (
           data.plans.map((plan) => (
           <div key={plan.name} className='col-span-3 lg:col-span-1 w-full mx-auto'>
-            <div className="card bg-base-100 shadow-sm">
+            <div className="card bg-[#f9f9f9] shadow-sm">
               <div className="card-body text-left">
                   {plan.badge && (<span className="badge badge-xs badge-warning">Most Popular</span>)}
                   <div className="flex justify-between">
@@ -114,7 +114,7 @@ export default function Pricing() {
         {newPlan !== "" && user && (
         <div className="fixed left-1/2 top-1/2 -translate-1/2 bg-[#0000004f] w-full h-full flex justify-center items-center z-40"
           onClick={() => newPlan !== "" && setNewPlan("")}>
-          <div role="alert" className="alert alert-vertical sm:alert-horizontal gap-1.5 text-[rgba(42,42,42,0.95)] mx-3"
+          <div role="alert" className="alert alert-vertical sm:alert-horizontal bg-[#f9f9f9] !border-gray-400 gap-1.5 text-[rgba(42,42,42,0.95)] mx-3"
             onClick={(e) => e.stopPropagation()}>
             <span>Are you sure you want to switch to {newPlan} plan?</span>
             <div>

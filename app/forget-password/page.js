@@ -35,7 +35,7 @@ export default function ForgetPassword() {
         <h2 className="text-2xl font-bold mb-4">Forget Password?</h2>
         <p className="md:text-lg font-semibold mb-10">Enter your email and we’ll send you a link to reset your password.</p>
         <div className="mb-3">
-            <input type="email" className="input lg:w-1/2 focus:!outline-0 focus-within:!outline-0 focus:border-[#004aad] rounded-3xl text-[#2a2a2af2]" placeholder="Enter your email here.." 
+            <input type="email" className="input lg:w-1/2 bg-[#f9f9f9] focus:!outline-0 focus-within:!outline-0 focus:border-[#004aad] rounded-3xl text-[#2a2a2af2]" placeholder="Enter your email here.." 
               onChange={(e) => {
                 emailAlert && setEmailAlert(false)
                 sendSuccess && setSendSuccess(false)

@@ -146,12 +146,12 @@ export default function Navbar() {
                     {openMainDropdown && (
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><button className='font-bold text-[#7c7c7c] transition-all duration-200 hover:!text-[#004aad]'
+                        className="menu menu-sm !bg-[#f9f9f9] dropdown-content rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li className="bg-[#f9f9f9]"><button className='font-bold text-[#7c7c7c] transition-all duration-200 hover:!text-[#004aad]'
                             onClick={startBtn}>Get Started</button></li>
-                        <li><Link href='/pricing' className='font-bold text-[#7c7c7c] transition-all duration-200 hover:!text-[#004aad]'
+                        <li className="bg-[#f9f9f9]"><Link href='/pricing' className='font-bold text-[#7c7c7c] transition-all duration-200 hover:!text-[#004aad]'
                         onClick={() => setOpenMainDropdown(false)}>Plans</Link></li>
-                        <li><Link href='/faq' className='font-bold text-[#7c7c7c] transition-all duration-200 hover:!text-[#004aad]'
+                        <li className="bg-[#f9f9f9]"><Link href='/faq' className='font-bold text-[#7c7c7c] transition-all duration-200 hover:!text-[#004aad]'
                         onClick={() => setOpenMainDropdown(false)}>FAQ</Link></li>
                     </ul>
                     )}
@@ -169,7 +169,7 @@ export default function Navbar() {
             <div className="navbar-end">
                 {user ? (
                     <div className="dropdown dropdown-end" ref={userDropdownRef} onClick={() => setOpenUserDropdown(!openUserDropdown)}>
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                        <div tabIndex={0} role="button" className="btn btn-ghost hover:!bg-[#f9f9f9] hover:!border-[#004aad] btn-circle avatar">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#004aad" className="size-8">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -179,7 +179,7 @@ export default function Navbar() {
                         {openUserDropdown && (
                         <ul
                             tabIndex="-1"
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            className="menu menu-sm dropdown-content bg-[#f9f9f9] rounded-box z-1 mt-3 w-52 p-2 shadow">
                             <li><span className='font-bold text-[#004aad] hover:!bg-transparent text-base cursor-auto'>Hi {userName}</span></li>
                             <li><Link href='/dashboard' className='font-bold text-[#7c7c7c] transition-all duration-200 hover:!text-[#004aad]'>Dashboard</Link></li>
                             <li><button className='font-bold text-[#7c7c7c] transition-all duration-200 hover:!text-[#004aad]' 
@@ -200,7 +200,7 @@ export default function Navbar() {
         {user && logoutAlert && (
         <div className="fixed left-1/2 top-1/2 -translate-1/2 bg-[#0000004f] w-full h-full flex justify-center items-center z-40"
             onClick={() => setLogoutAlert(false)}>
-            <div role="alert" className="alert alert-vertical gap-1.5 text-[rgba(42,42,42,0.95)]"
+            <div role="alert" className="alert alert-vertical bg-[#f9f9f9] !border-gray-400 gap-1.5 text-[rgba(42,42,42,0.95)]"
                 onClick={(e) => e.stopPropagation()}>
                 <span>Are you sure you want to logout?</span>
                 <div>
@@ -217,7 +217,7 @@ export default function Navbar() {
         {deleteAccountAlert && (
         <div className="fixed left-1/2 top-1/2 -translate-1/2 bg-[#0000004f] w-full h-full flex justify-center items-center z-40"
             onClick={() => setDeleteAccountAlert(false)}>
-            <div role="alert" className="alert alert-vertical gap-1.5 text-[rgba(42,42,42,0.95)]"
+            <div role="alert" className="alert alert-vertical bg-[#f9f9f9] !border-gray-400 gap-1.5 text-[rgba(42,42,42,0.95)]"
                 onClick={(e) => e.stopPropagation()}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true" role="img">
                     <title>Delete</title>
@@ -247,7 +247,7 @@ export default function Navbar() {
     {logoutBeforeDeleteAccount &&
     <div className="fixed left-1/2 top-1/2 -translate-1/2 bg-[#0000004f] w-full h-full flex justify-center items-center z-40"
           onClick={() => setLogoutBeforeDeleteAccount(false)}>
-          <div role="alert" className="alert alert-vertical gap-1.5 text-[rgba(42,42,42,0.95)] mx-3"
+          <div role="alert" className="alert alert-vertical bg-[#f9f9f9] !border-gray-400 gap-1.5 text-[rgba(42,42,42,0.95)] mx-3"
             onClick={(e) => e.stopPropagation()}>
             <span>Please sign in again for security reasons before permanently deleting your account?</span>
             <div>
